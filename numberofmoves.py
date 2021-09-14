@@ -1,6 +1,6 @@
 def minimumMoves(arr1,arr2):
     #counting step
-    d=0     
+    counter=0     
     for j in range(len(arr1)):
         num1=arr1[j]     
         num2=arr2[j]
@@ -13,9 +13,9 @@ def minimumMoves(arr1,arr2):
             #updating number
             num1=num1//10
             num2=num2//10
-            d=d+abs(remain1-remain2) #adding number of steps steps can't be negative so abs
+            counter=counter+abs(remain1-remain2) #adding number of steps steps can't be negative so abs
     #return the number of way
-    return d    
+    return counter    
 arr1_count = int(input().strip())
 arr1 = []
 for _ in range(arr1_count):
